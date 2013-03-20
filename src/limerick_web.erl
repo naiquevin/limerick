@@ -19,7 +19,7 @@ process(Req, 'GET', "/") ->
 process(Req, 'GET', _Path) ->
     Req:not_found();
 process(Req, 'POST', Path) ->
-    Paths = ["/xmpp-httpbind", "/http-bind"],
+    Paths = ["/xmpp-httpbind/", "/http-bind/"],
     case lists:member(Path, Paths) of
         true ->
             handle_bosh(Req);
