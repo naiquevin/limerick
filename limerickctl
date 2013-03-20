@@ -4,5 +4,5 @@
 cd `dirname $0`
 erl -hidden -noinput -noshell \
     -pa $PWD/ebin $PWD/deps/*/ebin \
-    -name limerickctl@`hostname` \
+    -sname limerickctl@`hostname` \
     -s limerick_ctl -extra limerick@`hostname` $@
